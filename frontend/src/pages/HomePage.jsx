@@ -32,10 +32,12 @@ export default function HomePage() {
           })}
         </SimpleGrid>
 
-        <Text fontSize={"xl"} fontWeight={"bold"} color={"gray.500"} textAlign={"center"}>
+        {products?.length === 0 && (
+          <Text fontSize={"xl"} fontWeight={"bold"} color={"gray.500"} textAlign={"center"}>
           No Products Found {" "}
           <Link to={"/create"}><Text as={"span"} color={"blue.500"} _hover={{ textDecoration: "underline" }}>Create New Product</Text></Link>
         </Text>
+        ) }
       </VStack>
     </Container>
   )
