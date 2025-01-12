@@ -18,6 +18,7 @@ export default function CreatePage() {
     console.log("Success: ", success);
     console.log("Message: ", message);
     toast({
+      position: "top-right",
       title: success ? "Success" : "Error",
       description: message,
       status: success ? 'success' : 'error',
